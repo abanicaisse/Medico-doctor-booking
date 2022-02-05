@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #0F62F1;
+    --light-text: #7A8193;
+    --dark-blue: #1D2B4F;
+    --white: #ffffff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+}
+/* OVERALL STYLING OF THE NAVBAR - MOBILE */
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+    /* Nav-logo */
+.logo {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: auto;
+}
+    /* Hamburger button */
+.hamburger {
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: red;
+    z-index: 1222;
+}
+
+    /* Styling the Navigation Links */
+.menu--links > * {
+    cursor: pointer;
+}
+
+.links--container {
+    visibility: hidden;
+    position: absolute;
+    width: 75%;
+    height: 85%;
+    background-color: var(--primary-color);
+    opacity: .6;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    top: 0;
+    right: 0;
+}
+
+.links--container > li {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.links--container > li:last-of-type {
+    width: fit-content;
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: .5rem .5rem;
+    border-radius: 1.5rem;
+    margin-left: .5rem;
+}
+
+.links--container> li > a {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: .1rem;
+}    
+
+.links--container > li > a:hover {
+    border-bottom: 3px solid var(--white);
+}
+
+.active-link {
+    border-bottom: 3px solid var(--white);
+}
+
+/* OVERALL STYLING OF THE HERO-SECTION - MOBILE */
+.hero {
+    margin: auto;
+    padding: 2rem 1rem 2rem 1rem;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    background: url("../images/photo1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px #0f62f188;
+}
+
+.hero-info--img {
+    display: none;
+}
+
+    /* Styling the Hero section with description of the site */
+.hero-info--description {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-info--description > h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    color: white;
+}
+
+.hero-info--description > p {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    opacity: .9;
+}
+
+.book-appointment {
+    width: fit-content;
+    margin: auto;
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+}
+
+    /* Styling the Stats bar in Dark Violet */
+.hero-stats {
+    width: 100%;
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    justify-content: center;
+    border-radius: .5rem;
+}
+
+.hero-stats > .stats:nth-of-type(2){
+    border-right: 1px solid var(--light-text);
+    border-left: 1px solid var(--light-text);
+}
+
+.stats {
+    border-bottom: 1px solid var(--light-text);
+    padding: 2rem 0;
+}
+
+.stats > p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stats > p > span {
+    font-size: .85rem;
+    color: var(--light-text);
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+    /* OVERALL STYLING OF THE NAVBAR - DESKTOP */
+    nav {
+        width: min(85%, 90rem);
+        margin: auto;
+        display: flex;
+    }
+
+    .menu-container {
+        width: 50%;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .links--container {
+        visibility: visible;
+        width: 100%;
+        position: initial;
+        background-color: var(--white);
+        opacity: 1;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .links--container> li > a {
+        color: var(--light-text);
+        font-size: 1rem;
+        text-decoration: none;
+        padding-bottom: .1rem;
+    }
+    
+    .links--container > li:last-of-type {
+        background-color: var(--primary-color);
+        width: fit-content;
+        color: white;
+        font-size: 1rem;
+        padding: .5rem .5rem;
+        border-radius: 1.5rem;
+    }
+
+    .links--container > li > a:hover {
+        border-bottom: 3px solid var(--primary-color);
+    }
+    
+    .active-link {
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    /* OVERALL STYLING OF THE HERO-SECTION - DESKTOP */
+    .hero {
+        width: min(85%, 90rem);
+        padding: 2rem 0;
+        gap: 0;
+        background: var(--white);
+        box-shadow: none;
+    }
+
+    .hero-info {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: center;
+    }
+    
+    .hero-info--img {
+        display: initial;
+        text-align: center;
+    }
+
+    .hero-info--img img {
+        max-width: 100%;
+    }
+    
+    .hero-info--description {
+        margin-right: 2rem;
+    }
+    
+    .hero-info--description > h1 {
+        font-size: 3.5rem;
+        text-align: left;
+        color: var(--dark-blue);
+    }
+    
+    .hero-info--description > p {
+        font-size: 1.5rem;
+        text-align: left;
+        color: var(--light-text);
+    }
+    
+    .book-appointment {
+        margin: 0;
+        background-color: var(--primary-color);
+        color: var(--white);
+        border-radius: 2.5rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        border-radius: 1rem;
+        margin-top: -10px;
+        padding: 1rem 0;
+    }
+    
+    .stats {
+        border-bottom: none;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
