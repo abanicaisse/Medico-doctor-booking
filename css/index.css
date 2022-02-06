@@ -70,6 +70,7 @@ nav {
     margin-bottom: 1rem;
 }
 
+    /* Contact us button */
 .links--container > li:last-of-type {
     width: fit-content;
     background-color: var(--white);
@@ -181,10 +182,6 @@ nav {
     color: var(--light-text);
     font-weight: normal;
 }
-
-
-
-
 
 
 

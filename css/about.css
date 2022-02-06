@@ -1,0 +1,167 @@
+@import url("../css/index.css");
+
+    /* OVERALL STYLING OF THE ABOUT SECTION - MOBILE */
+    .about, .doctors {
+        width: 90%;
+        margin: auto;
+        padding: 2rem 0;
+    }
+    
+    .about--img, .doctors--img {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .about--img img, .doctors--img img {
+        max-width: 100%;
+    }
+    
+    .about--description, .doctors--description {
+        display: grid;
+        gap: 1rem;
+        justify-content: center;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .about--description > h1, .doctors--description > h1 {
+        font-size: 2.25rem;
+        text-align: center;
+        color: var(--dark-blue);
+    }
+    
+    .about--description > p, .doctors--description > p {
+        font-size: 1rem;
+        text-align: center;
+        color: var(--light-text);
+    }
+    
+    .about--buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .about--buttons button {
+        display: inline;
+        width: 10rem;
+        background-color: var(--white);
+        color: var(--dark-blue);
+        border: 1px solid var(--light-text);
+        border-radius: .3rem;
+        padding: 1rem 0;
+    }
+
+    /* OVERALL STYLING OF THE DOCTOR SECTION - MOBILE */
+    
+    .doctors--services {
+        width: 50%;
+        margin: auto;
+        gap: 10rem;
+    }
+
+    .services {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        column-gap: 5rem;
+        row-gap: 2rem;
+    }
+
+    .services li {
+        position: relative;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+        color: var(--dark-blue);
+    }
+    
+    .services li::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        top: 25%;
+        left: -10%
+    }
+    
+    .doctors--description button{
+        background-color: var(--primary-color);
+        color: var(--white);
+        justify-self: center;
+        font-size: 1.5rem;
+        padding: 1rem 4rem;
+        border-radius: .5rem;
+        margin-left: .5rem;
+        margin-top: 2rem;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        /* OVERALL STYLING OF THE ABOUT SECTION - DESKTOP */
+        .about, .doctors {
+            width: min(85%, 90rem);
+            margin: auto;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            align-items: center;
+        }
+
+        .about--description, .doctors--description {
+            gap: 2rem;
+        }
+
+        .about--description > h1, .doctors--description > h1 {
+            font-size: 3.5rem;
+            text-align: left;
+            color: var(--dark-blue);
+        }
+        
+        .about--description > p, .doctors--description > p {
+            font-size: 1.5rem;
+            text-align: left;
+            color: var(--light-text);
+        }
+
+        .about--buttons {
+            justify-content: flex-start;
+        }
+
+        .about--buttons button {
+            padding: 1rem 0;
+        }
+
+        /* OVERALL STYLING OF THE SERVICES SECTION */
+        .doctors {
+            grid-template-columns: 60% 40%;
+        }
+
+        .doctors--description {
+            margin-right: 5rem;
+        }
+
+        .doctors--services {
+            width: 70%;
+            margin-left: 1rem;
+        }
+
+    
+        .services li {
+            text-align: left;
+            margin-left: 1rem
+        }
+        
+        .doctors--description button{
+            justify-self: start;
+            padding: 1rem 2rem;
+            border-radius: 2.5rem;
+            margin-left: 0rem;
+        }
+
+        .services {
+            grid-template: 1fr 1fr / 50% 50%;
+        }
+    }
