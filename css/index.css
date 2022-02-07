@@ -183,6 +183,159 @@ nav {
     font-weight: normal;
 }
 
+/* OVERALL STYLING OF THE SERVICES SECTION - MOBILE */
+#services {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+#services p {
+    color: var(--light-text);
+}
+
+.services--description {
+    display: grid;
+    gap: 1rem;
+}
+
+.services--description h1 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+}
+
+    /* Styling the service listing */
+.services--listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.services--listing .service {
+    /* background-color: lightcoral; */
+    display: grid;
+    gap: .3rem;
+}
+
+.services--listing > .service > div {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-color);
+    opacity: .1;
+    border: none;
+    border-radius: .2rem;
+    margin-bottom: .3rem;
+}
+
+.services--listing > .service > h3 {
+    color: var(--dark-blue);
+}
+
+/* OVERALL STYLING OF BOOK AN APPOINTMENT CTA SECTION */
+.cta {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 3rem auto;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: .5rem;
+    padding: 4rem 2rem;
+}
+
+.cta h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+/* OVERALL STYLING OF THE FOOTER SECTION - MOBILE */
+footer {
+    width: 90%; 
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+footer > .footer-links {
+    width: 100%;
+    margin: auto;
+    color:var(--light-text);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+footer h1 {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+.footer-links > div {
+    display: grid;
+    gap: 1rem;
+}
+
+.footer-links .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+footer .social-icons > * {
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    padding: .25rem .5rem;
+}
+
+.footer-links .newsletter input[type="email"] {
+    width: 18rem;
+    color: var(--light-text);
+    border: 1px solid lightgray;
+    border-radius: .5rem;
+    padding: .65rem 1rem;
+}
+
+.footer-links .newsletter {
+    width: fit-content;
+    position: relative;
+}
+
+.footer-links .newsletter::after {
+    position: absolute;
+    content: ">";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    top: 14%;
+    bottom: 25%;
+    right: 5%;
+}
+
+.copyright {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 
 
 
@@ -296,6 +449,52 @@ nav {
     .stats {
         border-bottom: none;
     }
+
+    /* OVERALL STYLING OF THE SERVICES SECTION - MOBILE */
+    #services {
+        width: min(85%, 90rem);
+        margin: auto;
+        display: grid;
+        gap: 3rem;
+        padding: 3rem 0 5rem 0;
+    }
+
+    .services--description {
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .services--description h1 {
+        font-size: 2.5rem;
+    }
+
+    /* OVERALL STYLING OF BOOK AN APPOINTMENT CTA SECTION */
+    .cta {
+        width: min(85%, 90rem);
+        color: white;
+        border-radius: 1rem;
+        padding: 7rem 5rem;
+    }
+
+    .cta h1 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+        z-index: 2;
+    }
+
+    .cta .book-appointment {
+        font-size: 1.5rem;
+        background-color: var(--white);
+        color: var(--primary-color);
+    }
+
+    /* OVERALL STYLING OF THE FOOTER SECTION - DESKTOP */
+    footer {
+        width: min(85%, 90rem)
+    }
+
     
 }
 

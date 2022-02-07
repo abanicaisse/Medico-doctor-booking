@@ -1,0 +1,58 @@
+@import url("../css/index.css");
+
+/* OVERALL STYLING OF THE DOCTORS SECTION - MOBILE */
+.doctors {
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+    color: var(--light-text);
+}
+
+.doctors h1 {
+    color: var(--dark-blue);
+}
+
+.doctors > * {
+    text-align: center;
+}
+
+.doctors > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.doctors-container {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.doctor--card {
+    border: 2px solid lightgray;
+    display: grid;
+    gap: .5rem;
+    text-align: left;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.doctor--card .doctor--img {
+    background-color: #d0dbee;
+    height: 20rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.doctor--card .doctor--img img {
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: -5px;
+}
+
+@media screen and (min-width: 1200px) {
+    .doctors {
+        width: min(85%, 90rem);
+    }
+}
