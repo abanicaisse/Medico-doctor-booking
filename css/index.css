@@ -12,6 +12,7 @@
 }
 
 html {
+    width: 100%;
     height: 100%;
 }
 
@@ -22,11 +23,15 @@ body {
 }
 /* OVERALL STYLING OF THE NAVBAR - MOBILE */
 nav {
-    width: 90%;
-    margin: auto;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    opacity: .9;
+    width: 100%;
     display: flex;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 5%;
+    z-index: 3;
 }
     /* Nav-logo */
 .logo {
@@ -38,10 +43,11 @@ nav {
 }
     /* Hamburger button */
 .hamburger {
+    position: relative;
     width: 1.75rem;
     height: 1.75rem;
     background-color: red;
-    z-index: 1222;
+    z-index: 2;
 }
 
     /* Styling the Navigation Links */
@@ -53,9 +59,9 @@ nav {
     visibility: hidden;
     position: absolute;
     width: 75%;
-    height: 85%;
+    height: 100vh;
     background-color: var(--primary-color);
-    opacity: .6;
+    opacity: .95;
     list-style: none;
     display: grid;
     justify-content: center;
@@ -63,11 +69,52 @@ nav {
     padding: 5rem 0;
     top: 0;
     right: 0;
+    z-index: 1;
+    /* animation: menu-slide-in 3s ease-out; */
+    /* animation: menu-slide-out 3s ease-out; */
+}
+
+@keyframes menu-slide-in {
+    0% {
+        left: 100%;
+    } 
+    100% {
+        left: 25%;
+    }
+}
+
+@keyframes menu-slide-out {
+    0% {
+        left: 25%;
+        visibility: visible;
+    }
+    100% {
+        left: 100%;
+        visibility: hidden;
+    }
 }
 
 .links--container > li {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+@keyframes text-appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
     /* Contact us button */
@@ -148,6 +195,11 @@ nav {
     border: none;
     border-radius: .5rem;
     padding: 1rem 2rem;
+    transition: transform 300ms ease;
+}
+
+.book-appointment:hover {
+    transform: scale(1.1);
 }
 
     /* Styling the Stats bar in Dark Violet */
@@ -278,6 +330,7 @@ footer h1 {
 footer a {
     color: var(--light-text);
     text-decoration: none;
+    transition: color 300ms ease;
 }
 
 footer a:hover {
@@ -301,7 +354,8 @@ footer .social-icons > * {
 }
 
 .footer-links .newsletter input[type="email"] {
-    width: 18rem;
+    /* width: 16rem; */
+    width: 100%s;
     color: var(--light-text);
     border: 1px solid lightgray;
     border-radius: .5rem;
@@ -342,8 +396,11 @@ footer .social-icons > * {
 @media screen and (min-width: 1200px) {
     /* OVERALL STYLING OF THE NAVBAR - DESKTOP */
     nav {
+        position: sticky;
+        top: 0;
         width: min(85%, 90rem);
         margin: auto;
+        opacity: .9;
         display: flex;
     }
 
@@ -358,6 +415,7 @@ footer .social-icons > * {
     .links--container {
         visibility: visible;
         width: 100%;
+        height: 100%;
         position: initial;
         background-color: var(--white);
         opacity: 1;
@@ -382,7 +440,16 @@ footer .social-icons > * {
         font-size: 1rem;
         padding: .5rem .5rem;
         border-radius: 1.5rem;
+        transition: color 300ms ease;
+        transition: background-color 300ms ease;
     }
+
+    .links--container > li:last-of-type:hover {
+        color: var(--primary-color);
+        background-color: var(--white);
+        border: 1px solid var(--primary-color)
+    }
+    
 
     .links--container > li > a:hover {
         border-bottom: 3px solid var(--primary-color);
@@ -450,7 +517,7 @@ footer .social-icons > * {
         border-bottom: none;
     }
 
-    /* OVERALL STYLING OF THE SERVICES SECTION - MOBILE */
+    /* OVERALL STYLING OF THE SERVICES SECTION - DESKTOP */
     #services {
         width: min(85%, 90rem);
         margin: auto;
@@ -469,7 +536,7 @@ footer .social-icons > * {
         font-size: 2.5rem;
     }
 
-    /* OVERALL STYLING OF BOOK AN APPOINTMENT CTA SECTION */
+    /* OVERALL STYLING OF BOOK AN APPOINTMENT CTA SECTION - DESKTOP */
     .cta {
         width: min(85%, 90rem);
         color: white;
@@ -493,6 +560,14 @@ footer .social-icons > * {
     /* OVERALL STYLING OF THE FOOTER SECTION - DESKTOP */
     footer {
         width: min(85%, 90rem)
+    }
+
+    .footer-links .newsletter input[type="email"] {
+        width: 18rem;
+    }
+
+    .footer-links .newsletter::after {
+        right: 5%;
     }
 
     
