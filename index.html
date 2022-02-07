@@ -19,7 +19,7 @@
                     <li><a href="./pages/about.html">About</a></li>
                     <li><a href="./index.html">Services</a></li>
                     <li><a href="./pages/doctors.html">Doctors</a></li>
-                    <li>Contact Us</li>
+                    <li id="contact-us">Contact Us</li>
                 </ul>
             </div>
         </div>
@@ -142,6 +142,62 @@
         </section>
         <p class="copyright">Copyright &copy;2022 Coded with love by <a href="https://www.github.com/abanicaisse" target="_blank">Aba Nicaisse</a></p>
     </footer>
+
+
+
+    <div class="book-modal" id="book-modal">
+        <div class="book-modal__content">
+            <header>
+                <h1>Book an Appointment</h1>
+                <p id="close-modal">&times;</p>
+            </header>
+            <div>
+                <form action="#">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name"><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <fieldset class="age-group">
+                        <legend>Age Group</legend>
+                        <input type="radio" name="age-group" id="kid">
+                        <label for="kid">1 - 12</label>
+
+                        <input type="radio" name="age-group" id="teen">
+                        <label for="teen">13 - 18</label>
+                        
+                        <input type="radio" name="age-group" id="adult">
+                        <label for="adult">19 - 45</label>
+
+                        <input type="radio" name="age-group" id="old">
+                        <label for="old">46 - 100</label>
+                    </fieldset>
+                    
+                    <fieldset class="sex">
+                        <legend>Sex</legend>
+                        <input type="radio" name="sex" id="male">
+                        <label for="male">M</label>
+
+                        <input type="radio" name="sex" id="female">
+                        <label for="female">F</label>
+                    </fieldset>
+
+                    <select name="medical-service" id="medical-service">
+                        <option value="">Choose Medical Service</option>
+                        <option value="primary-care">Primary Care</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="furnished">Furnished</option>
+                        <option value="physical-therapy">Physical Therapy</option>
+                        <option value="eye-care">Eye Care</option>
+                        <option value="dental-surgery">Dental Surgery</option>
+                    </select> <br>
+
+                    <input type="submit" value="Submit" id="modal-submit">
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="./index.js"></script>
 </body>
